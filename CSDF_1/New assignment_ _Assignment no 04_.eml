@@ -1,0 +1,256 @@
+Delivered-To: sidrasc05@gmail.com
+Received: by 2002:a05:7110:1056:b0:34f:88c8:3daf with SMTP id z22csp1893604gez;
+        Thu, 17 Sep 2026 21:34:08 -0700 (PDT)
+X-Received: by 2002:a17:902:e748:b0:2da:f7ad:cfea with SMTP id d9443c01a7336-2ddb1ae3d88mr28686365ad.8.1789706048403;
+        Thu, 17 Sep 2026 21:34:08 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1789706048; cv=none;
+        d=google.com; s=arc-20260327;
+        b=cGIgSaQf8LdloXHe4d0gldLSXUt5+Wxo3wqvB1okFSj0RQgTLe6Rzd67R4pctl1tDx
+         fGwOCtvJGKRXaAfUqUe24eK2J+byBg2Kx7uHo1CZJJ95BA1Bw+S8DGvqOiU+CdGCxzVT
+         JdyhP5Ggu2LfidwcUDYivQHT/RfV+3wjJsCi95TGWgr+pra4RhpmnjTbQKz4oH4T2Te+
+         X7/5VwB3o5XTiCoR2tCLj6jF3NkBBC0Dwj0pTtvwRk5MXBTnyZFUcx9xj8tuPBEijyHA
+         NUNHUCgzOovyNbwd9esh9cL84/AQ9nkYaV+3Q04saWiCSpdFte2P0+h+bqhD3cS77P7f
+         a4pQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20260327;
+        h=to:from:subject:message-id:gmsai:date:mime-version:dkim-signature;
+        bh=f0rigmwT15ZQ0JVuYgY97Kh/NHy6BMgg8MbOM5R1Aac=;
+        fh=Dh8sm5PeCufC+ozXYv6syR3ujWKkfZDBNAqGbGZzgP0=;
+        b=Ub/WlsPJyjv+Wh9RBw33j82e3rG3OqQ6rI6oLyeo1XjoZ0Sg6YSoIN7oFAGD9Zk+Ag
+         C9FTjip7twGof4vfcyouaTuKpMFVhWzNdKKqqtWYc6i+/mdRWIbEs/g8xud8vLZYUjS4
+         8b4Wh6/t1HIQntCWRYKwkX+a3M3VHYw7CnlCMh2I6IFRxouK8k8F8s7vH0NekOevuc24
+         osUZe6qXM3cjbIIKTdVbbp1TY2Sa/qt68iB6UKwL4EQI+8S4+SL56/vRRUzyS2Jaj1WN
+         MSDSYn7IoMpDXtVau+cPYqFcIwitVqO62X/CHiifa0gfFN8PucEMGsbkBtlRhuYsgJmu
+         GLWw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=CTnDipY6;
+       spf=pass (google.com: domain of 3ql-saggucc067-ax84hv4tbba775.z77z4x.v75b1watbvjoz5t14.v75@chime-notifications-apps.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3QL-saggUCc067-Ax84Hv4tBBA775.z77z4x.v75B1wAtBvJOz5t14.v75@chime-notifications-apps.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+Return-Path: <3QL-saggUCc067-Ax84Hv4tBBA775.z77z4x.v75B1wAtBvJOz5t14.v75@chime-notifications-apps.bounces.google.com>
+Received: from mail-sor-f69.google.com (mail-sor-f69.google.com. [209.85.220.69])
+        by mx.google.com with SMTPS id d9443c01a7336-2ddb73e3102sor3482985ad.1.2026.09.17.21.34.08
+        for <sidrasc05@gmail.com>
+        (Google Transport Security);
+        Thu, 17 Sep 2026 21:34:08 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 3ql-saggucc067-ax84hv4tbba775.z77z4x.v75b1watbvjoz5t14.v75@chime-notifications-apps.bounces.google.com designates 209.85.220.69 as permitted sender) client-ip=209.85.220.69;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@google.com header.s=20251104 header.b=CTnDipY6;
+       spf=pass (google.com: domain of 3ql-saggucc067-ax84hv4tbba775.z77z4x.v75b1watbvjoz5t14.v75@chime-notifications-apps.bounces.google.com designates 209.85.220.69 as permitted sender) smtp.mailfrom=3QL-saggUCc067-Ax84Hv4tBBA775.z77z4x.v75B1wAtBvJOz5t14.v75@chime-notifications-apps.bounces.google.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=google.com;
+       dara=pass header.i=@gmail.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=google.com; s=20251104; t=1789706048; x=1790310848; dara=google.com;
+        h=content-type:to:from:subject:message-id:gmsai:date:mime-version
+         :from:to:cc:subject:date:message-id:reply-to:content-type;
+        bh=f0rigmwT15ZQ0JVuYgY97Kh/NHy6BMgg8MbOM5R1Aac=;
+        b=CTnDipY6VAzh9IN5Gg6ufJUfFzSiHuLah36nlf84yoss6XZDRLNVH9/yhN4he8duCp
+         sSarwf9i7fXuUp7VD3C7BK4yWaIm3zYs3/NMXznzusuycCSPj4oLl0s3ezkNjOKD8TCU
+         asOIq65Fbgd+INTHsIIVSelYX2Yav4D6GnLBAGS+bhOTLuC06Ovw8d3BTPtcpFjRKeQ2
+         8XOLroXA8ta1woTRpHxXbXMoO6kzGifINnDbi7UR7uQ++hVSgI8soCgbgV3f0jLyPo+V
+         X2EaLchnqEBJmGuIEPa6sfkT5I70q7Kv0u8V5XP75++g67dUltk9ACAFXtNXeQzPrPHW
+         W7jA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20260707; t=1789706048; x=1790310848;
+        h=content-type:to:from:subject:message-id:gmsai:date:mime-version
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to
+         :content-type;
+        bh=f0rigmwT15ZQ0JVuYgY97Kh/NHy6BMgg8MbOM5R1Aac=;
+        b=GL1JgWkJM/iciD/D5Kd53yUiLhimfUae/3GQYVP7j2E4aQwokcPw22jUDzQZ3P3K+X
+         ltCkm8xyAXkJsq4yXyiHJk4hjUFHAlfob0CtJp1U1kYzZFzVoxuOheJt77n4bdmkuWyZ
+         RVeo781javVJVwiJ8de1E+3q6h0VPTlBkSyKiNjLmfSph93niGvceiMj4wgfhfAgo2gE
+         BoNS1Fl+0pdmOWZkCa8Q7xLzBQ51j70QYCYfBZr9Q9eZZJEHJQXxiUNplPTaHbn0sdR0
+         XtiiHCcLGnzwmQrlbOV1nsek4uNh89xv8bHOOIRSG0m3UmRk+16UhUq8kC2tVjtTo7Rr
+         jLsQ==
+X-Gm-Message-State: AFuF++m+jMUEVH21qVJCk1IYYBN1XUYIHkWo8F0z0B2L574sdKyZioGr
+	oX2VA0E73qRRGaL/g3aIoxvIMmBBq3qc4XwN4UEJiPG8Uxc0bEfXqwwbas6B7bBdX+FU995E3R1
+	sP5iNLt/yjSgsWtqhIIje6k2OijA9eESMeR+SM0Gly+Lf
+MIME-Version: 1.0
+X-Received: by 2002:a17:903:3df2:b0:2d8:d4cc:5bb1 with SMTP id
+ d9443c01a7336-2ddb1b7cc64mr17230645ad.17.1789706048086; Thu, 17 Sep 2026
+ 21:34:08 -0700 (PDT)
+Date: Thu, 17 Sep 2026 21:34:08 -0700
+gmsai: false
+X-Google-Notification-Metadata: EgA
+X-Notifications: NEW_ASSIGNMENT:870865130701:885840757706-1789706000637
+X-Notifications-Bounce-Info: AYJaBO0iYIyWfRFHPkRb6CCRhPnQQrwAfwS23jkAzLBkmHrvjiH0K23qWLHF7aZBs6agwvEQwnbA2-qhPm5bQH_oPJrsHXj8K2_Sl-Lj2_fiTpGG83Ymz_A0fZlfgbq2DfoFSqWGTqSkkSYnJ-xZsFeEm-Xb5KftX_vE9eA4U00V9Zes1TciBEe8H2IeSrbZD8AReZpcOo1A814n4pZdNskAImp9xi7vkQ7srCbr6S9s0uK8UFYJje8hHfEZUkAnT6IamK3YeyyML7mAx-ua2fmB9eRWLF_jfg0IUZbd5Zl81G_IA825JVALJauXQFINjAwNjA0MDQxNTM1NTk2OTMzMg
+Message-ID: <wkwcH3W4i_KSIFsKUBhmIA@notifications.google.com>
+Subject: New assignment: "Assignment no 04"
+From: "Jagdish Kapadnis (Classroom)" <no-reply@classroom.google.com>
+To: sidrasc05@gmail.com
+Content-Type: multipart/alternative; boundary="0000000000003fa951065bba6988"
+
+--0000000000003fa951065bba6988
+Content-Type: text/plain; charset="UTF-8"; format=flowed; delsp=yes
+
+
+Notification settings  
+<https://accounts.google.com/AccountChooser?continue=https://classroom.google.com/s?email%3Dsidrasc05@gmail.com&Email=sidrasc05@gmail.com>
+BE COMP 26-27 (STQA)  
+<https://accounts.google.com/AccountChooser?continue=https://classroom.google.com/c/ODcwODY1MTMwNzAx?email%3Dsidrasc05@gmail.com&Email=sidrasc05@gmail.com>
+New assignment
+
+Assignment no 04
+Solve all the Questions
+See details  
+<https://accounts.google.com/AccountChooser?continue=https://classroom.google.com/c/ODcwODY1MTMwNzAx/a/ODg1ODQwNzU3NzA2/details?email%3Dsidrasc05@gmail.com&Email=sidrasc05@gmail.com>
+Posted on 10:03 AM, Sep 18 (IST) by Jagdish Kapadnis
+
+Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043 USA
+This email was sent to you because you indicated that you'd like to receive  
+email notifications from Google Classroom. If you don't want to receive  
+emails like this, you can unsubscribe or change your settings  
+<https://accounts.google.com/AccountChooser?continue=https://classroom.google.com/s?email%3Dsidrasc05@gmail.com&Email=sidrasc05@gmail.com>.
+
+--0000000000003fa951065bba6988
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<html><head><link href=3Dhttps://fonts.googleapis.com/css?family=3DRoboto:4=
+00,500,700,bold|Google+Sans:400,500,700,bold rel=3Dstylesheet><style>@media=
+ (forced-colors: active) and (prefers-color-scheme: dark){.classroomTitleDa=
+rk{content: url("https://www.gstatic.com/classroom/email/classroom_type_whi=
+te.png");}}</style></head><body style=3D"font-family: Roboto,Helvetica,Aria=
+l,sans-serif; margin: 0; padding: 0; background-color: #FFFFFF"><img src=3D=
+"https://notifications.googleapis.com/email/t/AFG8qyWYso0EfyeVoXnx3b2kfFJTN=
+zJr7cNN9KGCGP9WFNgCEKBrEnvgYDkEvCPzIaaryJ2nvVG8eEl4x2ewDX4OXxBpvY5rPe-JDIQ2=
+Y4_DE3Kt1m4fUprm5BtHKztjJM2WeOsSAjCBvlnpIJxVq5lWvAL-CX-aANkmW8MAezv8f_MyPu-=
+IfKqidkHYBlWJgIrhW7BXgFQ2y7fFDCboXkkgmx-X1qRtN6l3Ghz-GDOS1F_YbgiPCLTN86E2UA=
+JCRBeKzoCWmwCfBuGx1CiB8jsfNeBDyDq55MBrC01geXqA8DTRwJSEAb8pihxlp_sqasXHllE8E=
+BIjagxlh3qhd_nzoUykBnZxsCNtF-W5dUh9s45eXfKHWA_76QGLGydtHENAl-fkRRYOZTsMd-PM=
+SpCfCGIttFr-E6I3a5xwckqwKd1CKQ2ME_ubT749bwOAAmhaaL3Ku54rOLt4aXTlVbc48RuByHo=
+GAB_G5fH1T4Lfyokwb9oi_WPj5CbVIgvk0s01CQ/a.gif" width=3D1 height=3D1 alt=3D"=
+" aria-hidden=3Dtrue><!--[if mso]><style>body, table, div, ul, li, td, span=
+, a { font-family: Helvetica, Arial, sans-serif !important; }</style><![end=
+if]--><table cellpadding=3D0 cellspacing=3D0 dir=3Dltr role=3Dpresentation =
+align=3Dcenter style=3D"background-color: #FFFFFF; border-collapse: collaps=
+e; max-width: 632px; min-width: 256px; word-break: break-word; width: 100%;=
+"><!--[if mso]><table cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" width=3D"600" style=3D"border-collapse: collapse; table-width: fixed;"=
+><tr><td><![endif]--><tr><td style=3D"padding: 16px;"><table cellpadding=3D=
+0 cellspacing=3D0 dir=3Dltr role=3Dpresentation><tbody><tr><td style=3D"pad=
+ding-bottom: 16px;"><table cellpadding=3D0 cellspacing=3D0 dir=3Dltr role=
+=3Dpresentation style=3D"background-color: #FFFFFF; border-collapse: collap=
+se; max-width: 632px; min-width: 256px; background-color: #FFFFFF; width: 1=
+00%;" width=3D100%><tr><td><div style=3D"float: left;line-height:32px;line-=
+height:2.00rem;"><img alt=3D"Classroom Logo" style=3D"display: block; margi=
+n: 0;" height=3D32 width=3D190 src=3Dhttps://www.gstatic.com/classroom/emai=
+l/classroom_text_with_logo_grey700.png></div><div style=3D"float: right; pa=
+dding-left: 32px; vertical-align: top;" align=3Dright><a href=3D"https://no=
+tifications.googleapis.com/email/redirect?t=3DAFG8qyUOZZnI_HGZNE1Sr19ZcltR7=
+7NR-unr8Q2uB0YZ60GsvY3A1PPGP3c3gvXzhtdLWvs5Iq2FbO_5eIHrTwYZ4qtiOGax3oeAvTwJ=
+N4DlI_OzZMHaD_QmkZEF53o0-TOTLiqRBR9sjEE9dqL8uPcJW6sk5zdYVouM0Qv6URk5qpBjIbZ=
+NwtXxYbOQ42dk7bXFmWL6FM5YVMwDOhm2HLjfNO-tHnJVIKepg7vOtkQs7oy5gPUFaNtpXk_oOT=
+G1JbAy9srHy_18u1Vs-ue6d_MX2eJLPmsUgLNVOZSEHK1ZvSzxMRGI6wwQs-e8yWl6ccXQpu7Me=
+tvFEy2AjRGjZbmkFKrxu27WIte2Gza9x71m7E3kd0aEYDkzyVBzMDy2IMhjZch3DvNIULddrKyK=
+CpJqiVnj78I&amp;r=3DeJxti0EKgCAUBU9TSw2iTRAV1UHkJyqoL_x6_5BatGg3zDA254tHKRU=
+RSswsDGC8FoQg18dtFmCdZkLMLhY92fchr5gTEL4Tzzoo55t-Z3cmxdQNi6mm1vaoNP2UG7e4Mo=
+Q&amp;s=3DALHZ2r7TDrTFmGnx1ppY2CuMFGIt" style=3D"text-decoration: none;"><t=
+able cellpadding=3D0 cellspacing=3D0 dir=3Dltr role=3Dpresentation style=3D=
+"border-collapse: collapse;"><tr><td style=3D"padding-top: 6px;"><img alt=
+=3D"" style=3D"vertical-align: middle" height=3D18 width=3D18 src=3Dhttps:/=
+/fonts.gstatic.com/s/i/googlematerialicons/notifications/v18/gm_grey-24dp/1=
+x/gm_notifications_gm_grey_24dp.png></td><td style=3D"font-family: Google S=
+ans,Roboto,Helvetica,Arial,sans-serif;font-size:14px;font-size:0.88rem;font=
+-weight: 500; letter-spacing: 0.25px;line-height:20px;line-height:1.25rem;c=
+olor: #3C4043; padding-left: 4px; white-space: nowrap; padding-top: 8px;">N=
+otification settings</td></tr></table></a></div></td></tr></table></td></tr=
+><tr><td style=3D"padding-bottom: 24px;"><table cellpadding=3D0 cellspacing=
+=3D0 dir=3Dltr role=3Dpresentation style=3D"border: 1px solid #DADCE0; bord=
+er-collapse: separate; border-radius: 8px; width: 100%;"><tr><td style=3D"p=
+adding: 0"><table cellpadding=3D0 cellspacing=3D0 dir=3Dltr role=3Dpresenta=
+tion style=3D"width: 100%; border-collapse: collapse; "><tr><td style=3Dpad=
+ding:&#32;24px&#32;24px&#32;0;><table cellpadding=3D0 cellspacing=3D0 dir=
+=3Dltr role=3Dpresentation style=3D"width: 100%; border-collapse: collapse;=
+ "><tr><td style=3Dborder&#45;bottom:&#32;1px&#32;solid&#32;#DADCE0;&#32;he=
+ight:&#32;0;padding&#45;bottom:&#32;8px;&#32;width:&#32;100%;><a href=3D"ht=
+tps://notifications.googleapis.com/email/redirect?t=3DAFG8qyWYHjisnOHy7ilvS=
+N5jTyjEx-vvMwIJt1ACoinOGHMyBe_qHwWISmpG6Kt7X9E32OKmoyq94JpyYqRNMQjmZtvaQbKS=
+O6Oi6CHZTAh91JmdsFQ5Zxb9ZAa4Gp2sNH0xl582Zar8e847PQzE5hqMy0tr-SnRB0_k7X56cTE=
+cVX4gHjkZBfqb0O5CC_30K9rIe6K88wHQDsPNmD_apW8Httmc6Vi-Gqxum0_elH9w_yWxyJeO4o=
+QTTi727gMNrL7qNwj1h5b_-pMOqPpHuPhkrV3mFfNJs2LAd_saxIypkcd7kUdY2rsEQNoZiPJcd=
+ItDAoPdY1Q9NfEhDCaBZxk4ToDOCi5LbTFevnyRHyJkujLPl67koSKzWgKugrTORnVEYgc11u3l=
+UPl8PHuYkRyFCbNV&amp;r=3DeJzLKCkpKLbS109MTs4vzSsp1kvPz0_PSdVLzs_Vd4SIOWfk5x=
+enFtkn5-eVZOaVptpmQPUk5yQWFxfl5-cia0rW93dJLvd3iTT0DfEt96tyrLBPzU3MzFE1dinOT=
+ClKLE42MHVIB4mAlKu5gli2WGQAJtI4Ew&amp;s=3DALHZ2r4TqzOYDR_gJNISuaX2o69w" sty=
+le=3D"text-decoration: none;"><table cellpadding=3D0 cellspacing=3D0 dir=3D=
+ltr role=3Dpresentation style=3Dborder-collapse:collapse;><tr><td style=3D"=
+font-family: Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-size:1.0=
+0rem;font-weight: 400; letter-spacing: 0.1px;line-height:24px;line-height:1=
+.50rem;color: #137333;vertical-align: top;">BE COMP 26-27 (STQA)</td><td st=
+yle=3D"padding-top: 3px; padding-left: 4px; vertical-align: top;"><img alt=
+=3D"" height=3D18 src=3Dhttps://fonts.gstatic.com/s/i/googlematerialicons/o=
+pen_in_new/v21/gm_grey-24dp/1x/gm_open_in_new_gm_grey_24dp.png width=3D18><=
+/td></tr></table></a></td></tr></table></td></tr></table></td></tr><tr><td =
+style=3D"padding: 24px 24px 32px 24px; "><table cellpadding=3D0 cellspacing=
+=3D0 dir=3Dltr role=3Dpresentation border=3D0 style=3D"width: 100%"><tr><td=
+ colspan=3D2 style=3D"font-family: Roboto,Helvetica,Arial,sans-serif;font-s=
+ize:11px;font-size:0.69rem;font-weight: 500; letter-spacing: 0.8px;line-hei=
+ght:16px;line-height:1.00rem;text-transform: uppercase;color: #5F6368; padd=
+ing-bottom: 8px;">New assignment</td></tr><tr><td style=3D"padding-right: 1=
+2px; vertical-align: top; width: 40px;"><!--[if mso]><v:oval xmlns:v=3D"urn=
+:schemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:wor=
+d" style=3D"height:40px;width:40px;" fillcolor=3D"#1e8e3e" stroke=3D"f" /><=
+v:image src=3D"https://fonts.gstatic.com/s/i/googlematerialicons/assignment=
+/v6/white-48dp/2x/gm_assignment_white_48dp.png" style=3D"position: absolute=
+; top: 8px; left: 8px; height: 24px; width: 24px;"/><![endif]--><span style=
+=3Dmso-hide:all;><div style=3D"border-radius: 50%;background-color: #1e8e3e=
+;height: 24px; width: 24px;padding: 8px;"><img height=3D24 src=3Dhttps://fo=
+nts.gstatic.com/s/i/googlematerialicons/assignment/v6/white-48dp/2x/gm_assi=
+gnment_white_48dp.png width=3D24 role=3Dpresentation /></div></span></td><t=
+d><table cellpadding=3D0 cellspacing=3D0 dir=3Dltr role=3Dpresentation styl=
+e=3D"width: 100%; word-break: break-word;"><tr><td style=3D"font-family: Go=
+ogle Sans,Roboto,Helvetica,Arial,sans-serif;font-size:16px;font-size:1.00re=
+m;font-weight: 500; letter-spacing: 0.1px;line-height:24px;line-height:1.50=
+rem;color: #000000; padding-bottom: 4px;"><div>Assignment no 04</div></td><=
+/tr><tr><td style=3D"font-family: Roboto,Helvetica,Arial,sans-serif;font-si=
+ze:14px;font-size:0.88rem;font-weight: 400; letter-spacing: 0.2px;line-heig=
+ht:20px;line-height:1.25rem;color: #3C4043; padding: 0 24px 0 0; word-break=
+: break-word; white-space: pre-line; padding-bottom: 16px;"><table cellpadd=
+ing=3D0 cellspacing=3D0 dir=3Dltr role=3Dpresentation style=3D"width: 100%;=
+"><tr><td style=3D"font-family: Roboto,Helvetica,Arial,sans-serif;font-size=
+:14px;font-size:0.88rem;font-weight: 400; letter-spacing: 0.2px;line-height=
+:20px;line-height:1.25rem;color: #3C4043; padding: 0 24px 0 0; word-break: =
+break-word; white-space: pre-line;"><div>Solve all the Questions</div></td>=
+</tr></table></td></tr><tr><td style=3D"padding-bottom: 12px;"><table cellp=
+adding=3D0 cellspacing=3D0 dir=3Dltr role=3Dpresentation><tr><td style=3D"b=
+order: 1px solid #DADCE0;border-radius: 4px; padding: 8px 24px;"><a href=3D=
+"https://notifications.googleapis.com/email/redirect?t=3DAFG8qyUDmuJMeF1ihz=
+GEjDbb5rZ3BIdFDj1tQBZMH5CPZi0zoxIFCQiGwXcQL4YFO1JjlmKFhD3XY031LuFPAF4HPMeVy=
+Ka2K40WVV2XwfqnzTpJ_ununQfAM_T3S66soS672Misn9P4JI2h1aPSZppQXHy16XgcYgRcFU3F=
+tO_NmywGtmkHXec55Y7BZRBzShOv7dl_LGivJYIiOXeRZJ-itTbQbx6rE2U88CePY9iqQzOed45=
+oohFU8k1Q_3TaZcgtF9oSWvuq4iIepMpsWZ80BYjzkGPtaa3PyBrGh7HnvyowTzTTOVcHbWuOXv=
+3lqfqiAgaR3A1ze_9AovcoKcQ5n3ClykE9o7ZGf0XVPx4tNUtOzNRY5d6FeARjoPWbdGUnRSbQL=
+xsNmvGpB78WOxWUb6Spvecb9vF2&amp;r=3DeJxtjLEKwjAURb9Gxz5rcRFKLcaxDYIOjuE1JIE=
+kT_JSIv16KTo4uF3O5Ryb85OPAAqR5pi5MkTG6wopQP9hZ0vEOnVIMbs469Z-HfSKORGFXwlBCi=
+xSPOrhNpRx6V-gQApTS3Et43JvxqXfw6Szcp47HZTzm0awm5Ji3B1OZiVraXtZV_vneQNegkD4&=
+amp;s=3DALHZ2r7jp0XqLWt9GPaHwU08ebJc" style=3D"font-family: Google Sans,Rob=
+oto,Helvetica,Arial,sans-serif;font-size:14px;font-size:0.88rem;font-weight=
+: 500; letter-spacing: 0.25px;line-height:20px;line-height:1.25rem;color: #=
+137333; text-decoration: none;" target=3D_blank>See details</a></td></tr></=
+table></td></tr><tr><td style=3D"font-family: Roboto,Helvetica,Arial,sans-s=
+erif;font-size:12px;font-size:0.75rem;font-weight: 400; letter-spacing: 0.3=
+px;line-height:16px;line-height:1.00rem;color: #5F6368;">Posted on 10:03 AM=
+, Sep 18 (IST) by Jagdish Kapadnis</td></tr></table></td></tr></table></td>=
+</tr></table></td></tr><tr><td><div style=3D"float: left; margin-right: 12p=
+x;"><img alt=3D"Google logo" src=3Dhttps://www.gstatic.com/classroom/email/=
+google_logo_grey700.png height=3D26 width=3D64></div><div style=3D"font-fam=
+ily: Roboto,Helvetica,Arial,sans-serif;font-size:12px;font-size:0.75rem;fon=
+t-weight: 400; letter-spacing: 0.3px;line-height:16px;line-height:1.00rem;c=
+olor: #5F6368; width: 80%; float: left; margin-top: 4px;">Google LLC 1600 A=
+mphitheatre Parkway, Mountain View, CA 94043 USA<br />This email was sent t=
+o you because you indicated that you'd like to receive email notifications =
+from Google Classroom. If you don't want to receive emails like this, you c=
+an <a href=3D"https://notifications.googleapis.com/email/redirect?t=3DAFG8q=
+yVM_rvt6LHFanEgi0AgcfR4HWZCRw_CtNeujtw9UGIb-X16lw0uUATV7I3pnP1oQZ9xigWQmeQK=
+0wSBRljgOyd81OvJSoXUO4pzEzUqgshJY1U5RdqgcobfWOWXk15T-MPZYBzG3LheB4gtLuzzkVd=
+z3QGnzwKaDHtV-pB9pcmhuCqlK3OcIIAqp74qKZzqJHG_WtV-jyQ_yLyEIF4NKxaHPkagy9d331=
+BSTgrk65gh1xCoOGC0-auzFzNAL11LekkBK1SW5LSvXIKw_x5UuzCls78qvsZA204jL8XnZc1WL=
+gYmmxVW2dDPfoy4ManMutMdTff0-CoilAi9Pm39v80ZqCB3qBSiM5T6kPH_sn51QzNeuID1rTan=
+-BuaPmKuFUeiAdQoGLQtFjfKFs4n_Zr3SpBPqwA&amp;r=3DeJxti0EKgCAUBU9TSw2iTRAV1UH=
+kJyqoL_x6_5BatGg3zDA254tHKRURSswsDGC8FoQg18dtFmCdZkLMLhY92fchr5gTEL4Tzzoo55=
+t-Z3cmxdQNi6mm1vaoNP2UG7e4MoQ&amp;s=3DALHZ2r4BLY0uGXSSzI3EscQcEsuo" style=
+=3D"color: #5F6368;">unsubscribe or change your settings</a>.</div></td></t=
+r></tbody></table></td></tr><!--[if mso]></td></tr></table><![endif]--></ta=
+ble></body></html>
+--0000000000003fa951065bba6988--
